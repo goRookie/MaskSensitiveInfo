@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" packages="com.rick.log4j">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd'T'HH:mm:ss.SSS} [%p] [%c{1}] -- %r %sc%n</pattern>
+            </PatternLayout>
+        </Console>
+
+        <!--<Rewrite name="obfuscateSensitiveData">-->
+        <!--<AppenderRef ref="Console"/>-->
+        <!--<SensitiveDataMaskPolicy/>-->
+        <!--</Rewrite>-->
+
+    </Appenders>
+    <Loggers>
+        <!--<Root level="info">-->
+        <!--<AppenderRef ref="obfuscateSensitiveData"/>-->
+        <!--</Root>-->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
